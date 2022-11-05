@@ -1,0 +1,34 @@
+
+    //Puxando informação sempre atualizada do banco de dados
+   // await firebase.database().ref('usuarios').on('value', (snapshot)=>{
+  //   setNome(snapshot.val())
+ //});
+    
+    //Puxando informação em uma única vez do banco de dados
+   //await firebase.database().ref('nome').once('value', (snapshot)=>{
+  //  setNome(snapshot.val())
+ //});
+
+   //Puxando uma informação especifica dentro de um nó
+   //await firebase.database().ref('usuarios/1').once('value', (snapshot)=>{
+   //  setNome(snapshot.val().nome);
+   //  setIdade(snapshot.val().idade);
+   //});
+
+   //Criando um nó
+  //   await firebase.database().ref('feedbacks').set('comentarios');
+
+   //Deletando um nó
+  //     await firebase.database().ref('feedbacks').remove();
+   
+    //Inserindo dados dentre de um nó e criando outro nó com novas informações
+   //await firebase.database().ref('usuarios').child(3).set({
+  // nome: 'Jose',
+ // cargo: 'Programador'
+//});
+
+    //Atualizando um dado dentro da pasta usuarios em um nó específico
+   //await firebase.database().ref('usuarios').child(3)
+  //.update({
+ // nome: 'Jose augusto'
+//})

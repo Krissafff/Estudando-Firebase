@@ -1,18 +1,20 @@
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
-import firebase from './src/firebaseConnection';
 
-export default function estudandoFirebase() {
- return (
-   <View style={estilo.container}>
-    <Text>Olá</Text>
-   </View>
-  );
+import { NavigationContainer} from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+
+import Home from './src/pages/Home/index';
+import Cadastrar from './src/pages/Cadastrar';
+
+const Stack = createStackNavigator();
+
+export default function App(){
+  return(
+  <NavigationContainer>
+    <Stack.Navigator initialRouteName='Home'>
+      <Stack.Screen name="Home" component={Home} options={{headerShown: false}}/>
+      <Stack.Screen name="Cadastrar" component={Cadastrar}/>
+    </Stack.Navigator>
+    </NavigationContainer>
+);
 }
-
-const estilo = StyleSheet.create({
-  container:{
-    flex: 1,
-    marginTop: 30
-  }
-})
